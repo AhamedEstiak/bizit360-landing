@@ -1,11 +1,29 @@
-import Image from "next/image";
+import Header from "@/components/header"
+import Hero from "@/components/hero"
+import TrustBar from "@/components/trust-bar"
+import Services from "@/components/services"
+import Process from "@/components/process"
+import Coverage from "@/components/coverage"
+import VendorNetwork from "@/components/vendor-network"
+import Careers from "@/components/careers"
+import Testimonials from "@/components/testimonials"
+import ContactForm from "@/components/contact-form"
+import Footer from "@/components/footer"
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1>BizIT360</h1>
-      </main>
-    </div>
-  );
+    <main className="min-h-screen">
+      <Header />
+      <Hero />
+      <TrustBar />
+      <Services />
+      <Process />
+      <Coverage />
+      <VendorNetwork />
+      <Careers />
+      <Testimonials />
+      <ContactForm />
+      <Footer />
+    </main>
+  )
 }
