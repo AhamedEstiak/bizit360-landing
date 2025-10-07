@@ -19,10 +19,11 @@ export default function Header() {
 
   const navLinks = [
     { href: "#home", label: "Home" },
+    { href: "#about", label: "About Us" },
     { href: "#services", label: "Services" },
-    { href: "#process", label: "Process" },
-    { href: "#vendors", label: "Vendors" },
-    { href: "#careers", label: "Careers" },
+    // { href: "#process", label: "Process" },
+    // { href: "#vendors", label: "Vendors" },
+    // { href: "#careers", label: "Careers" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -73,14 +74,14 @@ export default function Header() {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* <div className="hidden lg:flex items-center space-x-4">
             <Button variant="outline" size="sm">
               Client Login
             </Button>
             <Button size="sm" className="bg-primary hover:bg-primary-dark">
               Get a Quote
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button
@@ -110,14 +111,14 @@ export default function Header() {
                   {link.label}
                 </a>
               ))}
-              <div className="flex flex-col space-y-2 pt-4">
+              {/* <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="outline" size="sm">
                   Client Login
                 </Button>
                 <Button size="sm" className="bg-primary hover:bg-primary-dark">
                   Get a Quote
                 </Button>
-              </div>
+              </div> */}
             </nav>
           </div>
         )}

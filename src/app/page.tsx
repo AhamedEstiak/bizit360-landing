@@ -1,6 +1,7 @@
 import Header from "@/components/header"
 import Hero from "@/components/hero"
 import TrustBar from "@/components/trust-bar"
+import AboutUs from "@/components/about-us"
 import Services from "@/components/services"
 import Process from "@/components/process"
 import Coverage from "@/components/coverage"
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <Hero />
       <TrustBar />
+      <AboutUs />
       <Services />
       <Process />
       <Coverage />

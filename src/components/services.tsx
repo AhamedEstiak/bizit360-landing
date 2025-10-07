@@ -1,27 +1,37 @@
-import { Home, ClipboardCheck, Wrench, Trash2 } from "lucide-react"
+import { Home, Building2, Users, TrendingUp, Phone, Megaphone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Services() {
   const services = [
     {
       icon: Home,
-      title: "Property Preservation & Winterization",
-      description: "Protecting vacant properties with fast response and compliance.",
+      title: "Property Preservation & Maintenance",
+      description: "Work order processing, inspections, repairs, and compliance monitoring for preservation platforms.",
     },
     {
-      icon: ClipboardCheck,
-      title: "Property Inspections",
-      description: "Accurate, photo-documented field inspections and reporting.",
+      icon: Building2,
+      title: "Property Management Support",
+      description: "Tenant screening, lease setup, maintenance coordination, and admin support.",
     },
     {
-      icon: Wrench,
-      title: "Repairs & Board-Ups",
-      description: "Timely and insured vendor dispatch for emergency repairs.",
+      icon: Users,
+      title: "Real Estate Brokerage Support",
+      description: "MLS listings, transaction coordination, CRM management, and marketing support.",
     },
     {
-      icon: Trash2,
-      title: "Cleanouts & Debris Removal",
-      description: "Safe, efficient, and environmentally responsible cleanup.",
+      icon: TrendingUp,
+      title: "Wholesale Real Estate",
+      description: "Lead generation, buyer outreach, CRM management, and acquisitions assistance.",
+    },
+    {
+      icon: Phone,
+      title: "Lead Generation & Prospecting",
+      description: "Digital ads, cold calling, email automation, and CRM pipeline management.",
+    },
+    {
+      icon: Megaphone,
+      title: "Digital Marketing Support",
+      description: "Social media management, ad campaigns, content creation, and SEO services.",
     },
   ]
 
@@ -29,13 +39,13 @@ export default function Services() {
     <section id="services" className="py-20 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-balance">Comprehensive Field Services</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-balance">Our Service Lines</h2>
           <p className="text-lg text-muted-foreground text-pretty">
-            From preservation to inspections, we deliver reliable property services across the nation.
+            360° business and IT consulting solutions across the entire real estate ecosystem.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => {
             const Icon = service.icon
             return (
