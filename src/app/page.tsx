@@ -1,13 +1,12 @@
 import Header from "@/components/header"
 import Hero from "@/components/hero"
 import TrustBar from "@/components/trust-bar"
-import AboutUs from "@/components/about-us"
-import Services from "@/components/services"
+import About from "@/components/about"
+import ServicesGrid from "@/components/services-grid"
 import Process from "@/components/process"
-import Coverage from "@/components/coverage"
-import VendorNetwork from "@/components/vendor-network"
+import Operations from "@/components/operations"
+import Roadmap from "@/components/roadmap"
 import Careers from "@/components/careers"
-import Testimonials from "@/components/testimonials"
 import ContactForm from "@/components/contact-form"
 import Footer from "@/components/footer"
 
@@ -17,13 +16,12 @@ export default function Home() {
       <Header />
       <Hero />
       <TrustBar />
-      <AboutUs />
-      <Services />
+      <About />
+      <ServicesGrid />
       <Process />
-      <Coverage />
-      <VendorNetwork />
+      <Operations />
+      <Roadmap />
       <Careers />
-      <Testimonials />
       <ContactForm />
       <Footer />
     </main>

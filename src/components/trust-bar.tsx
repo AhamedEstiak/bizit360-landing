@@ -1,76 +1,34 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion"
 
 export default function TrustBar() {
-  const targets = {
-    states: 48,
-    compliance: 99,
-    jobs: 100,
-    staff: 400,
-  };
-
-  const [counts, setCounts] = useState(targets);
-  const [shouldAnimate, setShouldAnimate] = useState(false);
-
-  useEffect(() => {
-    setCounts({
-      states: 0,
-      compliance: 0,
-      jobs: 0,
-      staff: 0,
-    });
-    setShouldAnimate(true);
-  }, []);
-
-  useEffect(() => {
-    if (!shouldAnimate) return;
-
-    const duration = 2000;
-    const steps = 60;
-    const interval = duration / steps;
-
-    let step = 0;
-    const timer = setInterval(() => {
-      step++;
-      setCounts({
-        states: Math.floor((targets.states * step) / steps),
-        compliance: Math.floor((targets.compliance * step) / steps),
-        jobs: Math.floor((targets.jobs * step) / steps),
-        staff: Math.floor((targets.staff * step) / steps),
-      });
-
-      if (step >= steps) {
-        clearInterval(timer);
-        setCounts(targets);
-      }
-    }, interval);
-
-    return () => clearInterval(timer);
-  }, [shouldAnimate]);
-
-  const metrics = [
-    { value: counts.states, label: "States Covered", suffix: "" },
-    { value: counts.compliance, label: "SLA Compliance", suffix: "%" },
-    { value: counts.jobs, label: "Field Jobs Managed", suffix: "K+" },
-    { value: counts.staff, label: "Remote Staff", suffix: "+" },
-  ];
+  const stats = [
+    { value: "10K+", label: "Work Orders Processed" },
+    { value: "50+", label: "Vendor Partners" },
+    { value: "99.8%", label: "QC Pass Rate" },
+    { value: "24/7", label: "Operations Support" },
+  ]
 
   return (
-    <section className="py-16 bg-surface-dark text-text-inverse">
+    <section className="py-12 bg-muted/30 border-y border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {metrics.map((metric, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold mb-2">
-                {metric.value}
-                {metric.suffix}
-              </div>
-              <div className="text-sm text-text-inverse/70">{metric.label}</div>
-            </div>
+          {stats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="text-center"
+            >
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">{stat.value}</div>
+              <div className="text-sm text-muted-foreground">{stat.label}</div>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
