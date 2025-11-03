@@ -1,31 +1,35 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Globe2, Users, Shield, Zap } from "lucide-react"
+import { motion } from "framer-motion";
+import { Globe2, Users, Shield, Zap } from "lucide-react";
 
 export default function About() {
   const features = [
     {
       icon: Globe2,
       title: "Global Reach, Local Expertise",
-      description: "U.S.-based leadership with a dedicated Bangladesh operations hub for round-the-clock service.",
+      description:
+        "U.S.-based leadership with a dedicated Bangladesh operations hub for round-the-clock service.",
     },
     {
       icon: Users,
       title: "Experienced Team",
-      description: "Property preservation specialists with deep industry knowledge and proven track records.",
+      description:
+        "Property preservation specialists with deep industry knowledge and proven track records.",
     },
     {
       icon: Shield,
       title: "Quality Assured",
-      description: "Rigorous QC processes ensure 99.8% accuracy across all work orders and reporting.",
+      description:
+        "Rigorous QC processes ensure 99.8% accuracy across all work orders and reporting.",
     },
     {
       icon: Zap,
       title: "Fast Turnaround",
-      description: "Streamlined workflows and 24/7 operations mean faster processing and response times.",
+      description:
+        "Streamlined workflows and 24/7 operations mean faster processing and response times.",
     },
-  ]
+  ];
 
   return (
     <section id="about" className="py-20 lg:py-32 scroll-mt-20">
@@ -41,8 +45,12 @@ export default function About() {
             Your Partner in Property Preservation Excellence
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-            BizIT360 bridges the gap between U.S. property preservation companies and world-class operational support.
-            We combine American business standards with Bangladesh's talented workforce to deliver exceptional results.
+            BizIT360 is a U.S.-focused business and IT consulting company
+            providing 360° solutions across the real estate industry. From
+            property preservation and management to brokerage, wholesale, and
+            lead generation, we help clients streamline operations, boost
+            marketing, and scale through technology-driven processes and skilled
+            global support.
           </p>
         </motion.div>
 
@@ -59,12 +67,16 @@ export default function About() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <feature.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+              <h3 className="text-lg font-semibold text-foreground mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
