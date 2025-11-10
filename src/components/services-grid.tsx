@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FileText, Users, CheckSquare, BarChart3 } from "lucide-react";
+import { Wrench, Building2, ShieldCheck, BarChart3 } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -13,10 +13,10 @@ import {
 export default function ServicesGrid() {
   const services = [
     {
-      icon: FileText,
+      icon: Wrench,
       title: "Property Preservation & Maintenance",
-      description:
-        "Efficient intake, validation, and routing of work orders with meticulous attention to detail.",
+      // description:
+      //   "Efficient intake, validation, and routing of work orders with meticulous attention to detail.",
       features: [
         "Work order processing, bid preparation, and photo documentation",
         "Vendor coordination and compliance monitoring",
@@ -25,10 +25,10 @@ export default function ServicesGrid() {
       ],
     },
     {
-      icon: Users,
+      icon: Building2,
       title: "Property Management Support",
-      description:
-        "Seamless communication and scheduling with your vendor network for optimal execution.",
+      // description:
+      //   "Seamless communication and scheduling with your vendor network for optimal execution.",
       features: [
         "Tenant screening, lease setup, and rent tracking",
         "Maintenance ticket management and vendor scheduling",
@@ -37,39 +37,52 @@ export default function ServicesGrid() {
       ],
     },
     {
-      icon: CheckSquare,
+      icon: ShieldCheck,
       title: "Real Estate Brokerage Support",
-      description:
-        "Comprehensive QC processes ensuring every work order meets your standards.",
+      // description:
+      //   "Comprehensive QC processes ensuring every work order meets your standards.",
       features: [
-        "Photo verification",
-        "Compliance checks",
-        "Documentation review",
-        "Issue resolution",
+        "MLS listing creation and showing coordination (BrokerBay / ShowingTime)",
+        "Offer documentation, inspection scheduling, and transaction follow-up",
+        "CRM updates and client database maintenance (KVCore, Follow Up Boss, etc.)",
+        "Social media posting and marketing support for agents and teams",
       ],
     },
     {
       icon: BarChart3,
       title: "Wholesale Real Estate",
-      description:
-        "Detailed reporting and insights to help you make data-driven decisions.",
+      // description:
+      //   "Detailed reporting and insights to help you make data-driven decisions.",
       features: [
-        "Custom dashboards",
-        "Performance metrics",
-        "Trend analysis",
-        "Client reporting",
+        "Motivated seller lead generation and skip tracing",
+        "Buyer list building and investor outreach",
+        "CRM management and virtual acquisitions assistance",
+        "Contract preparation, cold calling, and JV coordination",
       ],
     },
     {
       icon: BarChart3,
       title: "Lead Generation & Prospecting",
-      description:
-        "Detailed reporting and insights to help you make data-driven decisions.",
+      // description:
+      //   "Detailed reporting and insights to help you make data-driven decisions.",
       features: [
-        "Custom dashboards",
-        "Performance metrics",
-        "Trend analysis",
-        "Client reporting",
+        "Buyer and seller lead generation using digital ads, SEO, and scraping",
+        "Cold calling, texting, and follow-up campaigns",
+        "Email/SMS automation and drip marketing",
+        "CRM pipeline updates and weekly lead reports",
+      ],
+    },
+    {
+      icon: BarChart3,
+      title: "Digital Marketing Support",
+      // description:
+      //   "Detailed reporting and insights to help you make data-driven decisions.",
+      features: [
+        "Social media management (Facebook, Instagram, TikTok, LinkedIn)",
+        "Real estate ad campaign setup (Google, Meta, YouTube)",
+        "Content creation – posts, reels, flyers, and ad creatives",
+        "Website SEO and PPC campaign management",
+        "Reputation management and analytics reporting",
       ],
     },
   ];
